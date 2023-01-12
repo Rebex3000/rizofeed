@@ -1,13 +1,36 @@
 <form onsubmit="submitForm(event)">
-  <h3>Please select the cake you would like to rate:</h3>
-  <label for="cake-selection">Cake Selection:</label>
-  <select id="cake-selection" name="cake-selection">
-    <option value="carrot">Carrot Cake</option>
-    <option value="chocolate">Chocolate Cake</option>
-    <option value="cinnamon">Cinnamon Rolls</option>
-    <option value="quiche">Quiche</option>
-  </select>
+ <h3>Please select the cake you would like to rate:</h3>
+  <div style="display: flex;">
+  
+    <label style="margin-right: 20px;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBEEeXxhgPNk432TnAsZjAbc4o3geK9I5AxQ&usqp=CAU" alt="Carrot Cake" height="100" width="100">
+      <br>
+      <input type="radio" name="cake-selection" value="carrot" required style="margin-right: 5px;">
+      <span>Carrot Cake</span>
+    </label>
 
+    <label style="margin-right: 20px;">
+      <img src="https://www.cookingclassy.com/wp-content/uploads/2022/04/easy-chocolate-cake-2.jpg" alt="Chocolate Cake" height="100" width="100">
+      <br>
+      <input type="radio" name="cake-selection" value="chocolate" required style="margin-right: 5px;">
+      <span>Chocolate Cake</span>
+    </label>
+    
+    <label style="margin-right: 20px;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlqCYIg_9F90T51Qk5pwL_lOCyRH3gjdbKFg&usqp=CAU" alt="Cinnamon Rolls" height="100" width="100">
+      <br>
+      <input type="radio" name="cake-selection" value="cinnamon" required style="margin-right: 5px;">
+      <span>Cinnamon Rolls</span>
+    </label>
+    
+    <label style="margin-right: 20px;">
+      <img src="https://images.lecker.de/quiche-mit-eiern-speck-und-cheddar-F6922210,id=3d0e0d0d,b=lecker,w=440,h=440,cg=c.jpg" alt="Quiche" height="100" width="100">
+      <br>
+      <input type="radio" name="cake-selection" value="quiche" required style="margin-right: 5px;">
+      <span>Quiche</span>
+    </label>
+  </div>
+  
   <h3>Please rate your experience with the cake:</h3>
   <label for="rating">Taste Rating:</label>
   <select id="rating" name="rating">
