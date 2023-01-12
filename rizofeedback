@@ -1,3 +1,25 @@
+//add button for Producers that redirects to a different page to upload images of new cakes
+<head>
+<style>
+.button {
+  background-color: #006169;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size:18px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<input type="button" class="button" id="prossumidores-button" onclick="location.href='prossumidores-form.html'" value="Prossuimidores">
+
+//show images of cakes
+<div id="form-container">
 <form onsubmit="submitForm(event)">
  <h3>Please select the cake you would like to rate:</h3>
   <div style="display: flex;">
@@ -31,6 +53,8 @@
     </label>
   </div>
   
+  
+  //rate cakes
   <h3>Please rate your experience with the cake:</h3>
   <label for="rating">Taste Rating:</label>
   <select id="rating" name="rating">
@@ -40,6 +64,7 @@
     <option value="2">⭐️⭐️️</option>
     <option value="1">⭐️</option>
   </select>
+  
   <h3>Please rate the price of the cake:</h3>
   <label for="price-rating">Price Rating:</label>
   <select id="price-rating" name="price-rating">
@@ -58,30 +83,32 @@
   <label for="comments">Comments:</label>
   <textarea id="comments" name="comments"></textarea>
   
+
+//submit form, send evaluation directly to producer
   <input type="submit" value="Submit">
 </form>
+
+
+//show thank you message
 <script>
    function submitForm(event) {
     event.preventDefault();
     //submit the form to your backend
-    var notification = document.createElement("div");
-    var message1 = document.createElement("p");
-    var message2 = document.createElement("p");
-    var message3 = document.createElement("p");
-    var link = document.createElement("a");
-    
-    message1.innerHTML = "Thank you so much for your feedback!";
-    message1.style.cssText = "font-size: 20px;";
-    message2.innerHTML = "Remember that all the products at Rizobar are hand-baked by other Rizomis like you, and everyone does their best to fill this Rizo counter with goodies.";
-    message2.style.cssText = "font-size: 14px;";
-    link.innerHTML = "Manual de Prossumidores";
-    link.href = "https://tinyurl.com/prossumidores-manual";
-    message3.appendChild(link);
-    notification.appendChild(message1);
-    notification.appendChild(message2);
-    notification.appendChild(message3);
-    document.body.appendChild(notification);
+    var formContainer = document.getElementById("form-container");
+    formContainer.style.display = "none";
+    var message = document.getElementById("message");
+    message.style.display = "block";
   }
 </script>
+
+</div>
+<div id="message" style="display: none;">
+  <h2 style="font-size: 20px;">Thank you so much for your feedback!</h2>
+  <p style="font-size: 14px;">Remember that all the products at Rizobar are hand-baked 
+  by other Rizomis like you, and everyone does their best to fill this Rizo counter with goodies.</p>
+  <p>If you're interested in becoming a prossumidor for the Rizobar, check out our
+  <a href="https://tinyurl.com/prossumidores-manual"> Manual de Prossumidores</a>  </p> 
+  If you already know you want to become a Prossumidor, join our 
+  <a href="add link here "> WhatsApp group</a>  </p>
 
 
