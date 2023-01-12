@@ -1,4 +1,5 @@
-//add button for Producers that redirects to a different page to upload images of new cakes
+<!//add button for Producers that redirects to a different page to upload images of new cakes>
+
 <head>
 <style>
 .button {
@@ -18,7 +19,8 @@
 </head>
 <input type="button" class="button" id="prossumidores-button" onclick="location.href='prossumidores-form.html'" value="Prossuimidores">
 
-//show images of cakes
+<!//show images of cakes>
+
 <div id="form-container">
 <form onsubmit="submitForm(event)">
  <h3>Please select the cake you would like to rate:</h3>
@@ -54,7 +56,7 @@
   </div>
   
   
-  //rate cakes
+  <!//rate cakes>
   <h3>Please rate your experience with the cake:</h3>
   <label for="rating">Taste Rating:</label>
   <select id="rating" name="rating">
@@ -84,12 +86,12 @@
   <textarea id="comments" name="comments"></textarea>
   
 
-//submit form, send evaluation directly to producer
+<!//submit form, send evaluation directly to producer>
   <input type="submit" value="Submit">
 </form>
 
 
-//show thank you message
+<!//show thank you message>
 <script>
    function submitForm(event) {
     event.preventDefault();
