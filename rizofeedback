@@ -1,4 +1,4 @@
-<form>
+<form onsubmit="submitForm(event)">
   <h3>Please select the cake you would like to rate:</h3>
   <label for="cake-selection">Cake Selection:</label>
   <select id="cake-selection" name="cake-selection">
@@ -11,22 +11,25 @@
   <h3>Please rate your experience with the cake:</h3>
   <label for="rating">Taste Rating:</label>
   <select id="rating" name="rating">
-    <option value="1">⭐️</option>
-    <option value="2">⭐️⭐️</option>
-    <option value="3">⭐️⭐️⭐️</option>
-    <option value="4">⭐️⭐️⭐️⭐️</option>
     <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+    <option value="4">⭐️⭐️⭐️⭐️</option>
+    <option value="3">⭐️⭐️⭐️</option>
+    <option value="2">⭐️⭐️️</option>
+    <option value="1">⭐️</option>
   </select>
-  
   <h3>Please rate the price of the cake:</h3>
   <label for="price-rating">Price Rating:</label>
   <select id="price-rating" name="price-rating">
-    <option value="1">⭐️</option>
-    <option value="2">⭐️⭐️</option>
-    <option value="3">⭐️⭐️⭐️</option>
-    <option value="4">⭐️⭐️⭐️⭐️</option>
     <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+    <option value="4">⭐️⭐️⭐️⭐️</option>
+    <option value="3">⭐️⭐️⭐️</option>
+    <option value="2">⭐️⭐️️</option>
+    <option value="1">⭐️</option>>
   </select>
+  
+  <h3>Please select the date you ate the cake:</h3>
+  <label for="date-consumed">Date Consumed:</label>
+  <input type="date" id="date-consumed" name="date-consumed">
   
   <h3>Please leave your comments:</h3>
   <label for="comments">Comments:</label>
@@ -34,3 +37,28 @@
   
   <input type="submit" value="Submit">
 </form>
+<script>
+   function submitForm(event) {
+    event.preventDefault();
+    //submit the form to your backend
+    var notification = document.createElement("div");
+    var message1 = document.createElement("p");
+    var message2 = document.createElement("p");
+    var message3 = document.createElement("p");
+    var link = document.createElement("a");
+    
+    message1.innerHTML = "Thank you so much for your feedback!";
+    message1.style.cssText = "font-size: 20px;";
+    message2.innerHTML = "Remember that all the products at Rizobar are hand-baked by other Rizomis like you, and everyone does their best to fill this Rizo counter with goodies.";
+    message2.style.cssText = "font-size: 14px;";
+    link.innerHTML = "Manual de Prossumidores";
+    link.href = "https://tinyurl.com/prossumidores-manual";
+    message3.appendChild(link);
+    notification.appendChild(message1);
+    notification.appendChild(message2);
+    notification.appendChild(message3);
+    document.body.appendChild(notification);
+  }
+</script>
+
+
