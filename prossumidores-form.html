@@ -1,0 +1,35 @@
+
+<form id="prossumidores-form" onsubmit="submitProssumidoresForm(event)">
+  <label for="cake-name">Name of the Cake:</label>
+  <input type="text" id="cake-name" name="cake-name" required>
+  <br>
+  <label for="email">Email address:</label>
+  <input type="email" id="email" name="email" required>
+  <br>
+  <label for="cake-image">Upload Cake Image:</label>
+  <input type="file" id="cake-image" name="cake-image" accept="image/*" required>
+
+  <br>
+  <input type="submit" value="Upload">
+</form>
+
+<script>
+  function submitProssumidoresForm(event) {
+    event.preventDefault();
+    var form = document.getElementById("prossumidores-form");
+    if (!form.checkValidity()) {
+      // form is not valid, show error message
+      return;
+    }
+    var cakeName = document.getElementById("cake-name").value;
+    var email = document.getElementById("email").value;
+    var cakeImage = document.getElementById("cake-image").files[0];
+    
+
+    // send data to backend
+
+    // After that you can add the cake image to the first page
+    // by creating an img element and appending it to the appropriate container
+
+  }
+</script>
