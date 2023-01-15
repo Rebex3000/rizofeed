@@ -1,4 +1,4 @@
-<!//add button for Producers that redirects to a different page to upload images of new cakes>
+<!//deefine css style for document>
 
 <head>
 <style>
@@ -15,15 +15,42 @@
   margin: 2px 2px;
   cursor: pointer;
 }
+
+body {
+    font-family: 'Open Sans',Arial, sans-serif;
+    font-weight: normal;
+    }
+    
+h1 {font-family: 'Open Sans',Arial, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    color:#006169;
+    }
+    
+h2 {font-family: 'Open Sans',Arial, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color:#006169;
+    }
 </style>
 </head>
-<input type="button" class="button" id="prossumidores-button" onclick="location.href='prossumidores-form.html'" value="Prossuimidores">
+
+<div id="banner" style="display: flex; align-items: center; justify-content: left; background-color: white;">
+  <img src="https://rizomacoop.pt/img/rizoma-logo.svg" alt="Rizoma logo" height="50" width="50" style="margin-right: 10px;">
+  <h1 >Rizobar Feedback Form</h1>
+</div>
+
+
+<!//add button for Producers that redirects to a different page to upload images of new cakes>
+
+<input type="button" class="button" id="prossumidores-button" onclick="location.href='prossumidoresform.html'" value="Prossuimidores">
 
 <!//show images of cakes>
 
 <div id="form-container">
 <form onsubmit="submitForm(event)">
- <h3>Please select the cake you would like to rate:</h3>
+  <h2 >Please select the cake you would like to rate:</h2>
+
   <div style="display: flex;">
   
     <label style="margin-right: 20px;">
@@ -57,8 +84,8 @@
   
   
   <!//rate cakes>
-  <h3>Please rate your experience with the cake:</h3>
-  <label for="rating">Taste Rating:</label>
+  <h2 >Please rate your experience with the cake:</h2>
+  <label for="rating" >Taste Rating:</label>
   <select id="rating" name="rating">
     <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
     <option value="4">⭐️⭐️⭐️⭐️</option>
@@ -67,7 +94,7 @@
     <option value="1">⭐️</option>
   </select>
   
-  <h3>Please rate the price of the cake:</h3>
+  <h2>Please rate the price of the cake:</h2>
   <label for="price-rating">Price Rating:</label>
   <select id="price-rating" name="price-rating">
     <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
@@ -77,11 +104,11 @@
     <option value="1">⭐️</option>>
   </select>
   
-  <h3>Please select the date you ate the cake:</h3>
+  <h2>Please select the date you ate the cake:</h2>
   <label for="date-consumed">Date Consumed:</label>
   <input type="date" id="date-consumed" name="date-consumed">
   
-  <h3>Please leave your comments:</h3>
+  <h2 >Please leave your comments:</h2>
   <label for="comments">Comments:</label>
   <textarea id="comments" name="comments"></textarea>
   
@@ -105,12 +132,9 @@
 
 </div>
 <div id="message" style="display: none;">
-  <h2 style="font-size: 20px;">Thank you so much for your feedback!</h2>
-  <p style="font-size: 14px;">Remember that all the products at Rizobar are hand-baked 
-  by other Rizomis like you, and everyone does their best to fill this Rizo counter with goodies.</p>
+  <h2 >Thank you so much for your feedback!</h2>
+  <p style="font-size: 14px;">Remember that all the products at Rizobar are hand-baked by other Rizomis like you, and everyone does their best to fill this Rizo counter with goodies.</p>
   <p>If you're interested in becoming a prossumidor for the Rizobar, check out our
   <a href="https://tinyurl.com/prossumidores-manual"> Manual de Prossumidores</a>  </p> 
   If you already know you want to become a Prossumidor, join our 
   <a href="add link here "> WhatsApp group</a>  </p>
-
-
